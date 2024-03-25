@@ -1,38 +1,164 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+   
+  background-image: linear-gradient(180deg, rgba(254,214,227,1) 0%, rgba(90,129,127,1) 99%);
+
+
+}
+
+h1{
+
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  color:#e28056;
+
+}
+
+.header{
   text-align: center;
+  margin-top: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.menu{
+ margin-top: 20px;
+ display: flex;
+ justify-content: center;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.buttons{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+   gap: 2rem;
+  
+}
+
+.buttons button{
+
+  padding: 0.5rem;
+
+  border-radius: 10px;
+  border:none;
+
+}
+
+.buttons button:hover{
+  cursor: pointer;
+  background-color: orangered;
+
+
+}
+
+.product-container{
+
+  margin-top: 30px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+
+}
+
+.cards{
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2rem;
+  width: 100%;
+ 
+}
+
+ 
+.product-card {
+ width: 250px;
+  padding: 10px; 
+  object-fit: cover;
+  position: relative;
+ 
+  max-width: 100%;
+ 
+}
+
+.product-card img{
+  width: 300px;
+  height: 300px;
+  opacity: 0.6;
+  border-radius: 30px;
+ background-position:center;
+ 
+}
+
+.product-card img:hover{
+
+  opacity: 1;
+  cursor: pointer;
+}
+
+.price{
+
+
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.721);
+  border-radius: 15px;
   color: white;
+
+
+
 }
 
-.App-link {
-  color: #61dafb;
+.product-title{
+
+  background-color: rgba(0, 0, 0, 0.721);
+  border-radius: 20px;
+  padding: 1rem;
+  color: white;
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  /* visibility: hidden; */
+  opacity: 0;
+
+
+ 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.product-card:hover .product-title{
+  opacity: 1;
+  animation-name: over ;
+  animation-duration: 0.3s;
 }
+
+@keyframes over{
+
+  from{
+    transform: translateX(100%);
+  }
+  to{
+    transform: translateX(0);
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
